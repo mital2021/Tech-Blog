@@ -19,7 +19,11 @@ const sess = {
   })
 };
 
-const hbs = exphbs.create({});
+app.use(session(sess));
+
+const helpers = require('./utils/helpers');
+
+const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -27,11 +31,9 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session(sess));
-app.use((req,res,next) => { res.locals = {...res.locals,...req.session}; next()})
+
 app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
-
