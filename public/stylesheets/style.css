@@ -18,7 +18,7 @@
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--dark);
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 24px;
   }
   
   h1,
@@ -37,7 +37,8 @@
     margin: 20px auto;
     width: 94%;
   }
-  
+ 
+
   p {
     font-size: 1.2rem;
   }
@@ -96,12 +97,9 @@
     padding: 3% 4%;
     background-color: var(--dark);
     color: var(--primary);
-  }
   
-  .hero p {
-    max-width: 75%;
   }
-  
+
   .app-title {
     font-size: 3rem;
     background-color: var(--primary);
@@ -115,6 +113,7 @@
   .list-group {
     padding: 0;
     list-style: none;
+ 
   }
   
   .list-item {
@@ -124,6 +123,7 @@
     background-color: var(--light-dark);
     color: var(--primary);
     text-decoration: none;
+   
   }
   
   .list-item:hover {
@@ -184,6 +184,14 @@
     border-radius: var(--border-radius);
   }
   
+  .link {
+    color: var(--primary);
+}
+
+
+
+
+
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;

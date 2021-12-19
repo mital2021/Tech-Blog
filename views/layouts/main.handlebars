@@ -5,36 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-            <nav class"nav">
-                    <a class="link" href="/">home</a>
-                    <a class="link" href="/dashboard">dashboard</a>
-                    {{#if loggedIn}}
-                    <a class="link" href="/" id="logout">logout</a>
-                    {{else}}
-                    <a class="link" href="/login">login</a>
-                    {{/if}}
-                </nav>          
-          </div>
+ <body class="background">
+   <header class="hero">
+      <nav class="nav-bar">
+        <div class="nav-wrapper">
+          
+            <li><a href="/">Home</a></li>
+            {{#if loggedIn}}
+              {{#if LoggedIn}}
+                <li><a href="/dashboard" id="dashboard">Dashboard</a></li>
+              {{/if}}
+              <li><a href="/login" id="logout">Log Out</a></li>
+            {{else}}
+              <li><a href="/login">Login</a></li>
+              <li><a href="/create-account">Create Account</a></li>
+            {{/if}}
+          
+        </div>
+      </nav>
 
-          <h1 class="app-title"><i class="fab "></i> The Tech Blog</h1>
-      </header>
-
-    <main>
+ <h1 class="app-title"><i class="fab fa-github"></i>Tech Blog</h1>
+ </header>
       {{{ body }}}
-    </main>
-  </div>
 
     {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
-
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+ 
 </body>
 
 </html>
