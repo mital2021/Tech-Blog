@@ -16,4 +16,4 @@ const withLoggedIn = (req, res, next) => {
   }
 }
 
-module.exports = { withAuth, withDash, withLoggedIn };
+module.exports = { withAuth,  withLoggedIn };
