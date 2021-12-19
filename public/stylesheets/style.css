@@ -19,12 +19,14 @@
     color: var(--dark);
     line-height: 1.5;
     font-size: 24px;
+    
   }
   
+
   h1,
   h2,
   h3,
-  h4,
+  h4, 
   h5,
   h6 {
     font-weight: 700;
@@ -99,6 +101,9 @@
     color: var(--primary);
   
   }
+.link {
+  color: var(--primary);
+}
 
   .app-title {
     font-size: 3rem;
@@ -110,26 +115,9 @@
     box-shadow: 6px 5px var(--light-dark);
   }
   
-  .list-group {
-    padding: 0;
-    list-style: none;
- 
-  }
-  
-  .list-item {
-    margin-bottom: 10px;
-    padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--light-dark);
-    color: var(--primary);
-    text-decoration: none;
-   
-  }
-  
-  .list-item:hover {
-    background-color: var(--dark);
-  }
-  
+
+
+
   .status-icon {
     padding: 2px 5px;
     margin: 0 5px;
@@ -139,11 +127,9 @@
   
   .icon-danger {
     color: rgb(255, 70, 70);
+   
   }
   
-  .icon-success {
-    color: rgb(29, 153, 255);
-  }
   
   /* CARDS */
   .card {
@@ -183,13 +169,6 @@
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
   }
-  
-  .link {
-    color: var(--primary);
-}
-
-
-
 
 
   /* HEIGHT / WIDTH UTILS */
